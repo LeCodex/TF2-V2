@@ -1,0 +1,9 @@
+attribute @s[scores={tf.disguise=1}] generic.movement_speed base set 0.1431
+attribute @s[scores={tf.disguise=2}] generic.movement_speed base set 0.1070
+attribute @s[scores={tf.disguise=3}] generic.movement_speed base set 0.1337
+attribute @s[scores={tf.disguise=4}] generic.movement_speed base set 0.1243
+attribute @s[scores={tf.disguise=5}] generic.movement_speed base set 0.1029
+attribute @s[scores={tf.disguise=6}] generic.movement_speed base set 0.1337
+attribute @s[scores={tf.disguise=7}] generic.movement_speed base set 0.1431
+attribute @s[scores={tf.disguise=8}] generic.movement_speed base set 0.1337
+attribute @s[scores={tf.disguise=9}] generic.movement_speed base set 0.1431
