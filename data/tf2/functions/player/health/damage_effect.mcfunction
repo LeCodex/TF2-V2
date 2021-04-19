@@ -14,6 +14,10 @@ scoreboard players operation #indicator tf.value *= #-1 tf.value
 function tf2:player/health/damage_indicator
 
 
+# Death
+execute if score @s tf.health matches ..0 run function tf2:player/health/death
+
+
 # Time since damage
 scoreboard players set @s tf.timeSinceDmg 0
 

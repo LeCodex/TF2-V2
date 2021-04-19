@@ -26,6 +26,7 @@ scoreboard objectives add tf.timeSinceDmg minecraft.custom:minecraft.play_one_mi
 scoreboard objectives add tf.proj.damage dummy
 scoreboard objectives add tf.proj.life dummy
 scoreboard objectives add tf.proj.ID dummy
+scoreboard objectives add tf.proj.dist dummy
 
 scoreboard objectives add tf.class dummy
 scoreboard objectives add tf.team dummy

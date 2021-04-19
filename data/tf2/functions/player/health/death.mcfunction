@@ -5,8 +5,15 @@ gamemode spectator
 
 playsound minecraft:entity.player.big_fall player @a ~ ~ ~ 2 1
 
+scoreboard players operation #target tf.value = @s tf.ID
+tag @s add tf.victim
+
 scoreboard players add @a[tag=tf.shooter] tf.score 1
+execute as @a[tag=tf.shooter] if score @s tf.ID = #target tf.value run scoreboard players remove @s tf.score 2
 execute unless entity @a[tag=tf.shooter] run scoreboard players remove @s tf.score 1
 
-execute if entity @a[tag=tf.shooter] run tellraw @a ["",{"selector":"@a[tag=tf.shooter]"},{"entity":"@p[tag=shooter]","nbt":"SelectedItem.tag.tfTags.killIcon","color":"dark_gray"},{"selector":"@s"}]
-execute unless entity @a[tag=tf.shooter] run tellraw @a ["",{"text":"☠ ","color":"dark_gray"},{"selector":"@s"}," fell to a clumsy, painful death"]
+execute unless entity @a[tag=tf.shooter] run tellraw @a ["",{"text":"☠ ","color":"white"},{"selector":"@s"}," fell to a clumsy, painful death"]
+execute as @a[tag=tf.shooter] unless score @s tf.ID = #target tf.value run tellraw @a ["",{"selector":"@s"},{"text":" "},{"storage":"tf:ui","nbt":"KillIcon","color":"white"},{"text":" "},{"selector":"@e[tag=tf.victim]"}]
+execute as @a[tag=tf.shooter] if score @s tf.ID = #target tf.value run tellraw @a ["",{"text":"☠ ","color":"white"},{"selector":"@s"}," bid farewell, cruel world!"]
+
+tag @s remove tf.victim
