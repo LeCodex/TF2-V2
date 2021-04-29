@@ -1,4 +1,4 @@
-execute anchored eyes run summon snowball ^ ^ ^ {Tags:["tf.setMotion","tf.projectile"],Motion:[0.0,0.0,0.0],Item:{id:"minecraft:arrow",Count:1},Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["tf.projectile_marker","tf.setID"]}]}
+execute anchored eyes run summon snowball ^ ^ ^ {Tags:["tf.setMotion","tf.projectile"],Motion:[0.0,0.0,0.0],Item:{id:"minecraft:arrow",Count:1},Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["tf.setID"]}]}
 
 scoreboard players add #projectileCounter tf.value 1
 
