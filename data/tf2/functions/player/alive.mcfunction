@@ -54,8 +54,8 @@ execute if score @s tf.class matches 9 run function tf2:player/classes/spy/main
 
 
 # Return items in offhand to mainhand
-execute if data entity @s Inventory[{Slot:-106b}] run item entity @s weapon.mainhand copy entity @s weapon.offhand
-item entity @s weapon.offhand replace minecraft:air 1
+execute if data entity @s Inventory[{Slot:-106b}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
+item replace entity @s weapon.offhand with minecraft:air 1
 
 
 # Ubercharge

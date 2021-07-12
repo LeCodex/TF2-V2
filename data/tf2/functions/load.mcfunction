@@ -21,7 +21,7 @@ scoreboard objectives add tf.dmgHitscan dummy
 scoreboard objectives add tf.dmgExplosive dummy
 scoreboard objectives add tf.dmgFire dummy
 scoreboard objectives add tf.dmgMelee dummy
-scoreboard objectives add tf.timeSinceDmg minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add tf.timeSinceDmg minecraft.custom:minecraft.total_world_time
 
 scoreboard objectives add tf.proj.damage dummy
 scoreboard objectives add tf.proj.life dummy
@@ -36,7 +36,7 @@ scoreboard objectives setdisplay list tf.score
 scoreboard objectives add tf.damage minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add tf.shoot minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add tf.shoot2 minecraft.used:minecraft.warped_fungus_on_a_stick
-scoreboard objectives add tf.plyTimer minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add tf.plyTimer minecraft.custom:minecraft.total_world_time
 scoreboard objectives add tf.hunger food
 scoreboard objectives add tf.fall dummy
 scoreboard objectives add tf.rclRcvry dummy

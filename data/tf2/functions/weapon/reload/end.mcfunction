@@ -1,4 +1,4 @@
-item block 0 0 0 container.0 copy entity @s weapon.mainhand
+item replace block 0 0 0 container.0 from entity @s weapon.mainhand
 
 scoreboard players set #amount tf.value 1
 execute if data entity @s {SelectedItem:{tag:{tfTags:{flags:["tf.clipReload"]}}}} run scoreboard players operation #amount tf.value = @s tf.clipSize
@@ -24,4 +24,4 @@ playsound minecraft:item.crossbow.loading_end player @a ~ ~1 ~
 tag @s remove tf.reloading
 execute if score @s tf.clip = @s tf.clipSize run tag @s remove tf.didFirstReload
 
-item entity @s weapon.mainhand copy block 0 0 0 container.0
+item replace entity @s weapon.mainhand from block 0 0 0 container.0

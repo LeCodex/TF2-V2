@@ -15,12 +15,12 @@ execute at @e[tag=tf.raycast.miss] run particle dust 0 0 0 .5
 # Next angle
 # tellraw @s {"entity":"@s","nbt":"SelectedItem.tag.tfTags.angles[0]"}
 
-item block 0 0 0 container.0 copy entity @s weapon.mainhand
+item replace block 0 0 0 container.0 from entity @s weapon.mainhand
 
 data modify block 0 0 0 Items[{Slot:0b}].tag.tfTags.angles append from block 0 0 0 Items[{Slot:0b}].tag.tfTags.angles[0]
 data remove block 0 0 0 Items[{Slot:0b}].tag.tfTags.angles[0]
 
-item entity @s weapon.mainhand copy block 0 0 0 container.0
+item replace entity @s weapon.mainhand from block 0 0 0 container.0
 
 scoreboard players remove #length tf.value 1
 execute if score #length tf.value matches 1.. run function tf2:weapon/hitscan/raycast

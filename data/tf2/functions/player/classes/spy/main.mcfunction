@@ -7,10 +7,10 @@ scoreboard players operation @s[scores={tf.disguiseChce=1..}] tf.disguise = @s t
 execute as @e[tag=tf.disguise.smoke] if score @s tf.ID = @p[tag=tf.current] tf.ID run function tf2:player/classes/spy/disguise/marker
 
 ## (Un)Disguising
-item entity @s[scores={tf.disguiseTmr=9}] armor.head replace air
-item entity @s[scores={tf.disguiseTmr=19}] armor.chest replace air
-item entity @s[scores={tf.disguiseTmr=29}] armor.legs replace air
-item entity @s[scores={tf.disguiseTmr=39}] armor.feet replace air
+item replace entity @s[scores={tf.disguiseTmr=9}] armor.head with air
+item replace entity @s[scores={tf.disguiseTmr=19}] armor.chest with air
+item replace entity @s[scores={tf.disguiseTmr=29}] armor.legs with air
+item replace entity @s[scores={tf.disguiseTmr=39}] armor.feet with air
 execute if score @s tf.disguise matches 1.. if score @s tf.disguiseTmr matches 0 run function tf2:player/classes/spy/disguise/start
 scoreboard players add @s[scores={tf.disguise=1..,tf.disguiseTmr=..39}] tf.disguiseTmr 1
 scoreboard players set @s[scores={tf.disguise=0}] tf.disguiseTmr 0
@@ -46,16 +46,16 @@ execute if data entity @s[scores={tf.blink=1..}] Inventory[{Slot:-106b}] run fun
 ## (De)Cloaking
 scoreboard players add @s[tag=tf.cloaked,scores={tf.blink=..39}] tf.blink 2
 scoreboard players remove @s[tag=!tf.cloaked,scores={tf.blink=1..}] tf.blink 1
-item entity @s[scores={tf.blink=1..}] armor.chest replace air
-item entity @s[scores={tf.blink=1..}] armor.legs replace air
-item entity @s[scores={tf.blink=1..}] armor.feet replace air
+item replace entity @s[scores={tf.blink=1..}] armor.chest with air
+item replace entity @s[scores={tf.blink=1..}] armor.legs with air
+item replace entity @s[scores={tf.blink=1..}] armor.feet with air
 
 ## Blinking
 execute as @e[distance=..1.5] unless score @s tf.team = @p[tag=tf.current] tf.team run scoreboard players set @a[tag=tf.current,tag=tf.cloaked] tf.blink 20
-item entity @s[scores={tf.blink=2..39},team=tf.red] armor.head replace red_stained_glass
-item entity @s[scores={tf.blink=2..39},team=tf.blu] armor.head replace light_blue_stained_glass
-item entity @s[scores={tf.blink=40}] armor.head replace air
-item entity @s[scores={tf.blink=1}] armor.head replace air
+item replace entity @s[scores={tf.blink=2..39},team=tf.red] armor.head with red_stained_glass
+item replace entity @s[scores={tf.blink=2..39},team=tf.blu] armor.head with light_blue_stained_glass
+item replace entity @s[scores={tf.blink=40}] armor.head with air
+item replace entity @s[scores={tf.blink=1}] armor.head with air
 
 ## Cloak Amount Management
 scoreboard players remove @s[tag=tf.cloaked] tf.cloak 3

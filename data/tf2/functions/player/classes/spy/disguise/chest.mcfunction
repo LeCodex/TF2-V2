@@ -7,5 +7,5 @@ execute if score @s tf.disguise matches 6 run function tf2:player/classes/engine
 execute if score @s tf.disguise matches 7 run function tf2:player/classes/medic/skin/chest
 execute if score @s tf.disguise matches 8 run function tf2:player/classes/sniper/skin/chest
 
-item entity @s[scores={tf.disguise=9},team=tf.red] armor.chest replace leather_chestplate{display:{color:3847130},AttributeModifiers:[]}
-item entity @s[scores={tf.disguise=9},team=tf.blu] armor.chest replace leather_chestplate{display:{color:11546150},AttributeModifiers:[]}
+item replace entity @s[scores={tf.disguise=9},team=tf.red] armor.chest with leather_chestplate{display:{color:3847130},AttributeModifiers:[]}
+item replace entity @s[scores={tf.disguise=9},team=tf.blu] armor.chest with leather_chestplate{display:{color:11546150},AttributeModifiers:[]}

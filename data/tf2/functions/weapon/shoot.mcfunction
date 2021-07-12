@@ -4,7 +4,7 @@ tag @s remove tf.didFirstReload
 scoreboard players remove @s tf.clip 1
 scoreboard players operation @s tf.wait = @s tf.cooldown
 
-item block 0 0 0 container.0 copy entity @s weapon.mainhand
+item replace block 0 0 0 container.0 from entity @s weapon.mainhand
 
 execute store result block 0 0 0 Items[{Slot:0b}].tag.tfTags.clip short 1 run scoreboard players get @s tf.clip
 
@@ -18,7 +18,7 @@ scoreboard players operation #dmg tf.value -= #ratio tf.value
 
 execute store result block 0 0 0 Items[{Slot:0b}].tag.Damage int 1 run scoreboard players get #dmg tf.value
 
-item entity @s weapon.mainhand copy block 0 0 0 container.0
+item replace entity @s weapon.mainhand from block 0 0 0 container.0
 
 
 # Sound

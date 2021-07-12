@@ -1,1 +1,1 @@
-item entity @s armor.chest replace leather_chestplate{AttributeModifiers:[]}
+item replace entity @s armor.chest with leather_chestplate{AttributeModifiers:[]}

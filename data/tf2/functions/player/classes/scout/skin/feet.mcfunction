@@ -1,1 +1,1 @@
-item entity @s armor.feet replace leather_boots{display:{color:1907997},AttributeModifiers:[]}
+item replace entity @s armor.feet with leather_boots{display:{color:1907997},AttributeModifiers:[]}
