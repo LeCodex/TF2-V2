@@ -29,13 +29,13 @@ scoreboard players set @a[team=tf.blu] tf.team 1
 scoreboard players set @a[team=tf.red] tf.team 2
 
 
-# Data storing
+# Data storage
 execute store result score @s tf.fall run data get entity @s FallDistance
 execute store result score @s tf.yRot run data get entity @s Rotation[0]
 execute store result score @s tf.slot run data get entity @s SelectedItemSlot
 
 
-# Cleaning
+# Cleanup
 tag @e[tag=tf.raycast.hit] remove tf.raycast.hit
 tag @s remove tf.shooter
 tag @s remove tf.current

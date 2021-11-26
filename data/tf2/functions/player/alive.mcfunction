@@ -1,5 +1,5 @@
 # Damage
-## Flinch
+## Flinch, was disabeld because constant teleports suck
 # scoreboard players operation #unflinch tf.value = @s tf.rclRcvry
 # scoreboard players operation @s tf.rclRcvry *= #unflinchSpd tf.value
 # scoreboard players operation @s tf.rclRcvry /= #100 tf.value

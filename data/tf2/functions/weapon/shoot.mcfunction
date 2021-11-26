@@ -8,6 +8,7 @@ item replace block 0 0 0 container.0 from entity @s weapon.mainhand
 
 execute store result block 0 0 0 Items[{Slot:0b}].tag.tfTags.clip short 1 run scoreboard players get @s tf.clip
 
+# Update the damage to represent ammo in the clip
 scoreboard players set #ratio tf.value 25
 scoreboard players operation #ratio tf.value *= @s tf.clip
 scoreboard players operation #ratio tf.value /= @s tf.clipSize

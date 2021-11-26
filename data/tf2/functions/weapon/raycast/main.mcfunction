@@ -7,4 +7,4 @@ execute positioned ~ ~-1.5 ~ as @a[distance=...5,tag=!tf.shooter] run function t
 execute positioned ~ ~-.5 ~ as @a[distance=...5,tag=!tf.shooter] run function tf2:weapon/raycast/hit
 execute unless block ~ ~ ~ #air_like run function tf2:weapon/raycast/miss
 execute if score #dist tf.value = #maxDist tf.value run function tf2:weapon/raycast/miss
-execute if score #dist tf.value < #maxDist tf.value unless entity @e[tag=tf.raycast.miss] unless entity @a[tag=tf.raycast.hit] positioned ^ ^ ^.5 run function tf2:weapon/raycast/main
+execute unless entity @e[tag=tf.raycast.miss] unless entity @a[tag=tf.raycast.hit] positioned ^ ^ ^.5 run function tf2:weapon/raycast/main
